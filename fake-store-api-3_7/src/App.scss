@@ -1,0 +1,149 @@
+:root {
+  background-color: rgb(32, 32, 32);
+  color: rgb(190, 190, 190);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// * home page style
+
+section.home {
+  width: 100vw;
+
+  h1 {
+    text-align: center;
+    margin: 50px;
+  }
+
+  article.store {
+    width: 80vw;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0 auto;
+
+    div.item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 500px;
+
+      div.img-container {
+        position: relative;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        height: 400px;
+        width: 90%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 250px;
+          height: auto;
+          max-height: 350px;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          img {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        width: 80%;
+      }
+
+      a {
+        color: rgb(240, 204, 253);
+        text-decoration: none;
+        font-weight: 200;
+        padding: 5px;
+
+        &:hover {
+          color: purple;
+        }
+      }
+    }
+  }
+}
+
+// * product page style
+
+section.products {
+  background-color: rgb(32, 32, 32);
+
+  a {
+    color: rgb(240, 204, 253);
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    text-align: center;
+    font-weight: 200;
+    margin: 30px auto;
+    padding: 5px;
+
+    &:hover {
+      color: purple;
+    }
+  }
+
+  div.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50vw;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  div.img-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+
+    div.bg-img {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+    }
+
+    p {
+      text-align: right;
+      color: #000;
+    }
+  }
+
+  h1,
+  p.description {
+    text-align: center;
+    line-height: 150%;
+  }
+
+  h1 {
+    width: 90%;
+    font-size: 22px;
+  }
+  p.description {
+    width: 80%;
+    font-size: 14px;
+  }
+}
